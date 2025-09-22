@@ -1,6 +1,6 @@
 # 2DAM - Recursos y Prácticas  
 
-Repositorio 1ºDAM, Ejercicios y Recursos Relacionados con el Curso.
+Repositorio 2ºDAM, Ejercicios y Recursos Relacionados con el Curso.
 
 ## Contenido  
 Programación multimedia y dispositivos móviles
