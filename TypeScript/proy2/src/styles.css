@@ -4,3 +4,56 @@ body {
     text-align: center;
     margin-top: 50px;
   }
+
+.calculator-text{
+  display: flex;
+  flex-direction: column;
+  gap: 10;
+  width: 40pc;
+  height: 10pc;
+  background-color: black;
+  margin: auto;
+  border-top-left-radius: 1pc;
+  border-top-right-radius: 1pc;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  justify-content: end;
+}
+
+.calcs{
+  align-self: flex-end;
+}
+
+.calculator-options{
+  margin: auto;
+  width: 40pc;
+  height: 45pc;
+  background-color: black;
+  border-bottom-left-radius: 1pc;
+  border-bottom-right-radius: 1pc;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr); 
+  gap: 10px;
+  padding: 10px;
+}
+
+
+
+
+button {
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: teal;
+}
