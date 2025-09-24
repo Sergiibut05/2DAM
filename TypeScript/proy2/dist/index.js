@@ -1,9 +1,14 @@
 const botones = document.querySelectorAll("button");
 let calc = "";
 const calculos = document.querySelector(".calcs");
+let invalidState = false;
 let result = -1;
 botones.forEach(boton => {
     boton.addEventListener("click", () => {
+        if (invalidState == true) {
+            calc = "";
+            invalidState = false;
+        }
         if (boton.dataset.type == "number" || boton.dataset.type == "operation") {
             calc += boton.textContent;
             console.log(calc);
@@ -19,21 +24,22 @@ botones.forEach(boton => {
         else {
             try {
                 result = eval(calc);
-                console.log(result);
-                calculos.textContent = result.toString();
+                if (isFinite(result) && !isNaN(result)) {
+                    console.log(result);
+                    calc = result.toString();
+                }
+                else {
+                    calc = "Error";
+                    invalidState = true;
+                }
             }
             catch (error) {
                 console.error(error);
                 calculos.textContent = "Error";
             }
-            finally {
-                calc = "";
-            }
         }
         //Que se Actualice el .calcs
-        if (boton.dataset.value != "=") {
-            calculos.textContent = calc || "0";
-        }
+        calculos.textContent = calc || "0";
     });
 });
 export {};

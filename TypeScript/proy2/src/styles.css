@@ -44,7 +44,9 @@ body {
 }
 
 
-
+.zero-btn{
+  grid-column: span 2;
+}
 
 button {
   background: transparent;
@@ -58,5 +60,13 @@ button {
 }
 
 button:hover {
-  background: teal;
+  background: rgb(112, 130, 130);
+}
+
+.border-button{
+  background-color: teal;
+
+}
+.border-button:hover{
+  background-color: rgb(49, 168, 156);
 }
