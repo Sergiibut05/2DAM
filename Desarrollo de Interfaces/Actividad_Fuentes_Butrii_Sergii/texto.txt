@@ -1,0 +1,25 @@
+Principales fuentes seguras
+
+Estas son algunas de las más comunes, que vienen instaladas casi siempre en Windows, macOS, muchos dispositivos móviles, etc.:
+
+Sans-serif:
+    Arial 
+    Tahoma 
+    Trebuchet MS 
+    Verdana 
+Serif:
+    Times New Roman 
+    Georgia 
+Monospace:
+    Courier New 
+    Lucida Console 
+
+
+Motivos por los cuales son apropiadas
+
+Compatibilidad: están instaladas en muchos sistemas operativos, por lo que se evitan sorpresas de que el usuario no tenga la fuente y que el navegador tenga que sustituirla. 
+Carga rápida: ya que no hace falta descargarlas, la página carga más rápido. 
+Legibilidad / Accesibilidad: muchas de las fuentes seguras tienen formas claras, lo que ayuda a que sean legibles en distintas resoluciones y dispositivos. 
+Manejo de reserva: si una fuente personalizada falla, tener una fuente segura en la pila asegura que el diseño sufra lo menos posible.
+
+Link para pasar de ttf a woff/woff2: https://products.groupdocs.app/es/conversion/ttf-to-woff

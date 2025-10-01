@@ -1,0 +1,35 @@
+
+/* 1. Safe font */
+.safeFont1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.safeFont2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.safeFont3 {
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* 2. Google Font */
+.googleFonts {
+    font-family: 'Roboto', sans-serif;
+    color: brown;
+}
+
+/* 3. Fuente alojada en el servidor (local) */
+@font-face {
+    font-family: 'MerriweatherLocal';
+    src: url('./fonts/Merriweather-Italic-VariableFont_opsz\,wdth\,wght.woff2') format('woff2'),
+         url('./fonts/Merriweather-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+.servidor {
+    font-family: 'MerriweatherLocal', serif;
+    color: darkslateblue;
+}
