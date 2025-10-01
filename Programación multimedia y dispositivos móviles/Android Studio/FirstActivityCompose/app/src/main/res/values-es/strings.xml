@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mi App</string>
+    <string name="quantity">Cantidad</string>
+    <string name="people">Comensales</string>
+</resources>

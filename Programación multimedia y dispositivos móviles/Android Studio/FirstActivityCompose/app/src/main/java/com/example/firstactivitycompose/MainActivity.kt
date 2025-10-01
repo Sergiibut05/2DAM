@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 
 import androidx.compose.foundation.layout.Row
@@ -39,9 +38,13 @@ import androidx.compose.material3.*
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.layout.*
 
+
 import androidx.compose.foundation.text.*
+
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
-import com.example.firstactivitycompose.ui.theme.FirstActivityComposeTheme
+import com.example.firstactivitycompose.ui.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterial3Api::class)
@@ -49,10 +52,11 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            FirstActivityComposeTheme {
+            AppTheme {
                 Scaffold(
                     topBar = {
-                        TopAppBar(title = {Text("Mi App")})
+
+                        TopAppBar(title = {Text(stringResource(R.string.app_name))})
                     },
 
                     ) {
@@ -93,7 +97,7 @@ fun EjemploMaterial3() {
             modifier = Modifier.fillMaxWidth(),
             value = cantidad,
             onValueChange = { cantidad = it },
-            label = { Text("Cantidad") },
+            label = { Text(stringResource(R.string.people)) },
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Number
             )
@@ -103,17 +107,19 @@ fun EjemploMaterial3() {
             modifier = Modifier.fillMaxWidth(),
             value = comensales,
             onValueChange = { comensales = it },
-            label = { Text("Comensales") },
+            label = { Text(stringResource(R.string.quantity)) },
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Number
             )
         )
 
         Row(
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text("Redondear Propina")
+            Text(style = MaterialTheme.typography.headlineSmall,
+                text = "Redondear Propina")
 
             Switch(
                 checked = checked,
@@ -156,7 +162,19 @@ fun EjemploMaterial3() {
             },
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text("Calcular")
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+
+            ){
+                Icon(
+                    painter = painterResource(id = R.drawable.circles),
+                    contentDescription = "Icon",
+                    modifier = Modifier.size(24.dp)
+                )
+                Spacer(modifier = Modifier.width(5.dp))
+                Text("Calcular")
+            }
+
         }
 
         Spacer(modifier = Modifier.height(16.dp))

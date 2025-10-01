@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">FirstActivityCompose</string>
+    <string name="app_name">Mi App</string>
+    <string name="quantity">Quantity</string>
+    <string name="people">People</string>
 </resources>
